@@ -8,7 +8,7 @@ if "requests" not in st.session_state:
     st.session_state["requests"] = []
 
 # App Title
-st.title("Waste Management System")
+st.title("WASTE MANAGEMENT SYSTEM")
 
 # Tabs for User and Admin Views
 tab1, tab2 = st.tabs(["User View", "Admin View"])
@@ -32,7 +32,7 @@ with tab1:
     st.subheader("Request Waste Collection")
     if len(st.session_state["users"]) > 0:
         user = st.selectbox("Select your name:", [user["name"] for user in st.session_state["users"]])
-        waste_type = st.selectbox("Type of Waste:", ["Plastic", "Organic", "E-waste", "Other"])
+        waste_type = st.selectbox("Type of Waste:", ["Plastic", "Organic", "BORONGOTO", "MAKARATASI", "VYUMA CHAKAVU"])
         if st.button("Submit Request"):
             st.session_state["requests"].append({"user": user, "waste_type": waste_type, "status": "Pending"})
             st.success("Request submitted successfully!")
@@ -60,4 +60,4 @@ with tab2:
 
 # Footer
 st.write("---")
-st.write("Developed with Streamlit")
+st.write("Developed by DANIEL")
